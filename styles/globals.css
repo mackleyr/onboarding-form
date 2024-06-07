@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 122, 254;
+  --background-end-rgb: 0, 122, 254;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+  background: linear-gradient(180deg, rgba(var(--background-start-rgb), 1), rgba(var(--background-end-rgb), 1));
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+input::placeholder {
+  color: rgba(103, 154, 248, 0.5);
+}
+
+input:focus::placeholder {
+  color: rgba(103, 154, 248, 0.7);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+input {
+  text-align: left;
+  padding-left: 20px;
+  font-size: 1.5rem;
+}
